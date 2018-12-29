@@ -5,6 +5,6 @@ files:
     destination: /home/ubuntu/spring-boot-vuejs
 hooks:
   ApplicationStart:
-    - location: runapp.sh
+    - location: scripts/app_start.sh
   AfterInstall:
       - location: scripts/build.sh
