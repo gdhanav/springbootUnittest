@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: ./
-    destination: /home/ubuntu/spring-boot-vuejs
+    destination: /home/ec2-user/springbootUnittest
 hooks:
   ApplicationStart:
     - location: scripts/app_start.sh
