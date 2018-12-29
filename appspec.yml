@@ -7,4 +7,4 @@ hooks:
   ApplicationStart:
     - location: runapp.sh
   AfterInstall:
-      - location: Scripts/build.sh
+      - location: scripts/build.sh
