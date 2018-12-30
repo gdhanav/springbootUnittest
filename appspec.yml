@@ -5,7 +5,7 @@ files:
     destination: /home/ec2-user/springbootUnittest
 hooks:
   ApplicationStart:
-    - location: scripts/app_start.sh
+    - location: ./scripts/app_start.sh
   AfterInstall:
-    - location: scripts/bootStrap.sh
-    - location: scripts/build.sh
+    - location: ./scripts/bootStrap.sh
+    - location: ./scripts/build.sh
