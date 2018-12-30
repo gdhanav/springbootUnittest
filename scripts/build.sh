@@ -10,6 +10,7 @@ echo "Moving application artefact to payload directory"
 #Setup payload for upload
 PAYLOAD_APP_DIR="${PAYLOAD_DIR}/app"
 mkdir -p $PAYLOAD_APP_DIR
+chown -R ec2-user:ec2-user $PAYLOAD_APP_DIR
 cp -r "${APP_DIR}/"build/libs/*.jar "${PAYLOAD_APP_DIR}"
 
 echo "Moving application scripts to payload directory"
