@@ -4,7 +4,7 @@ APP_DIR="springbootUnittest"
 COMPONENT_DIR="springbootUnittest/scripts"
 PAYLOAD_DIR="/home/ec2-user"
 #Build application package
- ./gradlew clean assemble
+cd /home/ec2-user/springbootUnittest/ && ./gradlew clean assemble
 
 echo "Moving application artefact to payload directory"
 #Setup payload for upload
@@ -15,3 +15,4 @@ cp -r build/libs/*.jar "${PAYLOAD_APP_DIR}"
 chmod 777 "${PAYLOAD_APP_DIR}"/*
 echo "Moving application scripts to payload directory"
 cp -r "${COMPONENT_DIR}/"* "${PAYLOAD_DIR}"
+
