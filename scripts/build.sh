@@ -12,9 +12,6 @@ PAYLOAD_APP_DIR="${PAYLOAD_DIR}/app"
 mkdir -p $PAYLOAD_APP_DIR
 chown -R ec2-user:ec2-user $PAYLOAD_APP_DIR
 cp -r build/libs/*.jar "${PAYLOAD_APP_DIR}"
-
+chmod 777 "${PAYLOAD_APP_DIR}"/*
 echo "Moving application scripts to payload directory"
-cp -r "${COMPONENT_DIR}/scripts/"* "${PAYLOAD_DIR}"
-
-echo "Listing payload contents"
-ls -R "${PAYLOAD_DIR}"
+cp -r "${COMPONENT_DIR}/"* "${PAYLOAD_DIR}"
