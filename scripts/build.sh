@@ -13,5 +13,8 @@ mkdir -p $PAYLOAD_APP_DIR
 chown -R ec2-user:ec2-user $PAYLOAD_APP_DIR
 cp -r build/libs/*.jar "${PAYLOAD_APP_DIR}"
 chmod 777 "${PAYLOAD_APP_DIR}"/*
-
+if [ -d /home/ec2-user/springbootUnittest/build ]
+then
+    chown -R ec2-user:ec2-user /home/ec2-user/springbootUnittest/build
+fi
 
